@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page.</h1>
+
+
+    <h2>Author : {{author}} </h2>
+    <h2>Age : {{age}} </h2>
+
+    <h1>{{ lst | join:" - " }}</h1>
+
+    <h2>{{ birthdate | date:"D d M Y" }}</h2>
+    <h2>{{ birthdate|date:"SHORT_DATE_FORMAT" }}</h2>
+
+    {% comment %} <h1>{{ " " | default: "nothing here" }} </h1> {% endcomment %}
+    <h1>{{ value | add:"5" }}</h1>
+    {% comment %} <h2>{{[1, 2, 3] | add:"[4, 5, 6]"}}</h2> {% endcomment %}
+
+    <h2>{{ author | capfirst }}</h2>
+
+    <h3>{{ "Python is Fun" | cut:" " }}</h3>
+    <h3>{{ "January - February - March" | cut:"-" }}</h3>
+
+    <h1>{{ name | dictsort:"name" }}</h1>
+
+    <h2>{{ lst | first }}</h2>
+    <h2>{{ lst | last }}</h2>
+    <h2>{{ lst | length }}</h2>
+    <h2>{{ lst | linenumbers }}</h2>
+    <h1>{{ lst | slice:":2" }}</h1>
+    <h1>{{ lst | wordcount }}</h1>
+
+    <h3>{{'Humpty Dumpty sat on the Wall' | lower}}</h3>
+    <h3>{{'humpty dumpty sat on the wall' | upper}}</h3>
+
+    <h2>{{'Django rest framework' | title}}</h2>
+
+    <h1>{{ 'Joseph is a software engineer' | truncatewords:3 }}</h1>
+    <h1>{{ 'Joseph is a software engineer' | truncatechars:3 }}</h1>
+
+    <b>I</b> <b>love</b> <span>dogs</span> | striptags
+
+    
+</body>
+</html>
